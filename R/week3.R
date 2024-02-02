@@ -2,7 +2,7 @@
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 # Data Import and Cleaning
-raw_df <- read.csv("~/Desktop/datascience/project_3/data/week3.csv", header = T)
+raw_df <- read.csv("../data/week3.csv", header = T)
 raw_df$timeStart <- as.POSIXct(raw_df$timeStart, format = "%Y-%m-%d %T")
 raw_df$timeEnd <- as.POSIXct(raw_df$timeEnd, format = "%Y-%m-%d  %T")
 clean_df <-subset(raw_df, timeStart >= "2017-07-01 00:00:00")
